@@ -2,7 +2,7 @@
 
 > **Important**
 
-We’re going to build a simple clone of Hackernews. Here’s a list of the features the app will have:
+I'm going to build a simple clone of Hackernews. Here’s a list of the features the app will have:
 
 Display a list of links
 Search the list of links
