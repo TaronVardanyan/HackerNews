@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import {gql, useMutation} from '@apollo/client';
 
+//this query should be separated
+
 const CREATE_LINK_MUTATION = gql`
  mutation PostMutation(
     $description: String!
