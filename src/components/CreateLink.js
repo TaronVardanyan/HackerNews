@@ -1,30 +1,19 @@
 import { useState } from 'react';
+import { useMutation } from '@apollo/client';
+import { useNavigate } from 'react-router-dom';
+import { CREATE_LINK_MUTATION } from "../graphql/mutation";
 import {gql, useMutation} from '@apollo/client';
 
-//this query should be separated
-
-const CREATE_LINK_MUTATION = gql`
- mutation PostMutation(
-    $description: String!
-    $url: String!
-  ) {
-    post(description: $description, url: $url) {
-      id
-      createdAt
-      url
-      description
-    }
-  }
-`
-
 const CreateLink = () => {
+    const navigate = useNavigate();
     const [formState, setFormState] = useState({
         description: '',
         url: ''
     });
 
     const [createLink] = useMutation(CREATE_LINK_MUTATION, {
-        variables: formState
+        variables: formState,
+        onCompleted: () => navigate('/')
     });
 
     const handleSubmit = async (e) => {
