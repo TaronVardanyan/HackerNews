@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
 import { CREATE_LINK_MUTATION } from "../graphql/mutation";
-import {gql, useMutation} from '@apollo/client';
 
 const CreateLink = () => {
     const navigate = useNavigate();
