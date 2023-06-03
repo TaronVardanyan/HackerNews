@@ -1,8 +1,6 @@
 
 # HackerNews
 
-> **Important**
-
 I'm going to build a simple clone of Hackernews. Here’s a list of the features the app will have:
 
 Display a list of links
